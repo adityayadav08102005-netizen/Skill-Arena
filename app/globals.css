@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+/*
+ * SkillArena design tokens — the approved light theme.
+ * Raw values live on :root so plain CSS and inline styles can use them;
+ * @theme maps them into Tailwind utilities (bg-page, text-ink, bg-arena-50 …).
+ */
+:root {
+  --sa-page: #f7f6fb;
+  --sa-panel: #ffffff;
+  --sa-line: #e4e2f0;
+  --sa-ink: #1b1a2e;
+  --sa-muted: #6b6a80;
+
+  /* AlgoArena — violet */
+  --sa-arena-50: #eeedfe;
+  --sa-arena-200: #cecbf6;
+  --sa-arena-300: #afa9ec;
+  --sa-arena-400: #7f77dd;
+  --sa-arena-600: #534ab7;
+  --sa-arena-800: #3c3489;
+
+  /* SkillBridge — teal */
+  --sa-bridge-50: #e1f5ee;
+  --sa-bridge-200: #9fe1cb;
+  --sa-bridge-400: #1d9e75;
+  --sa-bridge-600: #0f6e56;
+  --sa-bridge-800: #085041;
+
+  /* XP, streaks, rewards — amber */
+  --sa-xp-50: #faeeda;
+  --sa-xp-200: #fac775;
+  --sa-xp-400: #ef9f27;
+  --sa-xp-600: #ba7517;
+  --sa-xp-700: #854f0b;
+  --sa-xp-800: #633806;
+
+  /* Status */
+  --sa-danger-50: #fcebeb;
+  --sa-danger-600: #a32d2d;
+  --sa-danger-800: #791f1f;
+  --sa-info-50: #e6f1fb;
+  --sa-info-400: #378add;
+  --sa-info-800: #0c447c;
+
+  --sa-shadow-float: 0 8px 24px rgba(60, 52, 137, 0.14);
+  --sa-ease-snap: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@theme inline {
+  --color-page: var(--sa-page);
+  --color-panel: var(--sa-panel);
+  --color-line: var(--sa-line);
+  --color-ink: var(--sa-ink);
+  --color-muted: var(--sa-muted);
+
+  --color-arena-50: var(--sa-arena-50);
+  --color-arena-200: var(--sa-arena-200);
+  --color-arena-300: var(--sa-arena-300);
+  --color-arena-400: var(--sa-arena-400);
+  --color-arena-600: var(--sa-arena-600);
+  --color-arena-800: var(--sa-arena-800);
+
+  --color-bridge-50: var(--sa-bridge-50);
+  --color-bridge-200: var(--sa-bridge-200);
+  --color-bridge-400: var(--sa-bridge-400);
+  --color-bridge-600: var(--sa-bridge-600);
+  --color-bridge-800: var(--sa-bridge-800);
+
+  --color-xp-50: var(--sa-xp-50);
+  --color-xp-200: var(--sa-xp-200);
+  --color-xp-400: var(--sa-xp-400);
+  --color-xp-600: var(--sa-xp-600);
+  --color-xp-700: var(--sa-xp-700);
+  --color-xp-800: var(--sa-xp-800);
+
+  --color-danger-50: var(--sa-danger-50);
+  --color-danger-600: var(--sa-danger-600);
+  --color-danger-800: var(--sa-danger-800);
+  --color-info-50: var(--sa-info-50);
+  --color-info-400: var(--sa-info-400);
+  --color-info-800: var(--sa-info-800);
+
+  --radius-card: 16px;
+  --shadow-float: var(--sa-shadow-float);
+  --ease-snap: var(--sa-ease-snap);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--sa-page);
+  color: var(--sa-ink);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--sa-arena-200);
+  color: var(--sa-arena-800);
+}
+
+@keyframes sa-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes sa-float {
+  50% {
+    translate: 0 -7px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

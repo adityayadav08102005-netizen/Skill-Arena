@@ -1,0 +1,42 @@
+{
+  "name": "skillarena",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "seed": "node scripts/seed.mjs",
+    "make-admin": "node scripts/make-admin.mjs",
+    "test:seed": "node scripts/test-seed.mjs",
+    "dev:memory-db": "node scripts/memory-db.mjs",
+    "test:external": "node scripts/test-external.mjs",
+    "test": "node scripts/run-tests.mjs",
+    "test:smoke": "node scripts/smoke-api.mjs",
+    "test:security": "node scripts/test-security.mjs",
+    "build:problems": "node scripts/build-problems.mjs"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "better-auth": "^1.7.26",
+    "lucide-react": "^1.76.0",
+    "mongodb": "^7.9.1",
+    "mongoose": "^9.12.2",
+    "motion": "^14.14.0",
+    "next": "16.4.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "recharts": "^3.11.0",
+    "server-only": "^0.0.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "4.3.3",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.6",
+    "mongodb-memory-server": "^11.3.0",
+    "tailwindcss": "4.3.3"
+  },
+  "type": "module"
+}

@@ -1,0 +1,88 @@
+import { demoId } from "./ids.js";
+
+/**
+ * Fictional companies used for sample listings. Real company names are
+ * deliberately avoided so demo data never implies a real partnership.
+ */
+export const companies = [
+  {
+    id: demoId("company", 1),
+    slug: "nimbus-labs",
+    name: "Nimbus Labs",
+    description: "Cloud tooling start-up building developer dashboards for small engineering teams.",
+    industry: "Developer tools",
+    size: "11-50",
+    location: "Bengaluru, India",
+    isVerified: true,
+  },
+  {
+    id: demoId("company", 2),
+    slug: "quillpay",
+    name: "Quillpay",
+    description: "Payments platform helping small merchants accept UPI and card payments.",
+    industry: "Fintech",
+    size: "201-500",
+    location: "Pune, India",
+    isVerified: true,
+  },
+  {
+    id: demoId("company", 3),
+    slug: "orbit-systems",
+    name: "Orbit Systems",
+    description: "Enterprise software services company with a large campus hiring programme.",
+    industry: "IT services",
+    size: "1000+",
+    location: "Chennai, India",
+    isVerified: true,
+  },
+  {
+    id: demoId("company", 4),
+    slug: "brightpath-analytics",
+    name: "Brightpath Analytics",
+    description: "Analytics consultancy turning retail and logistics data into dashboards.",
+    industry: "Data and analytics",
+    size: "51-200",
+    location: "Hyderabad, India",
+    isVerified: true,
+  },
+  {
+    id: demoId("company", 5),
+    slug: "kitewire",
+    name: "Kitewire",
+    description: "Remote-first team building collaboration apps used by schools.",
+    industry: "EdTech",
+    size: "11-50",
+    location: "Remote",
+    isVerified: false,
+  },
+  {
+    id: demoId("company", 6),
+    slug: "greenleaf-health",
+    name: "Greenleaf Health",
+    description: "Health-tech company building appointment and records software for clinics.",
+    industry: "Healthcare",
+    size: "51-200",
+    location: "Kochi, India",
+    isVerified: true,
+  },
+  {
+    id: demoId("company", 7),
+    slug: "tessellate-ai",
+    name: "Tessellate AI",
+    description: "Applied machine learning studio working on document understanding.",
+    industry: "Artificial intelligence",
+    size: "11-50",
+    location: "Gurugram, India",
+    isVerified: true,
+  },
+  {
+    id: demoId("company", 8),
+    slug: "harbor-logistics",
+    name: "Harbor Logistics",
+    description: "Logistics network with in-house teams for routing and warehouse software.",
+    industry: "Logistics",
+    size: "501-1000",
+    location: "Mumbai, India",
+    isVerified: true,
+  },
+];

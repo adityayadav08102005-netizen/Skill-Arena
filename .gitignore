@@ -1,0 +1,79 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files — never commit real values; only the empty template is tracked
+.env
+.env*
+*.env
+*.env.*
+!.env.example
+
+# secrets, API keys, certificates and credentials
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.crt
+*.cer
+*.der
+id_rsa*
+id_ed25519*
+*.secret
+secrets.json
+secrets.*.json
+credentials.json
+*credentials*.json
+client_secret*.json
+token.json
+*service-account*.json
+*serviceAccount*.json
+*firebase-adminsdk*.json
+.npmrc
+.yarnrc.yml
+
+# supabase local state
+supabase/.temp/
+supabase/.branches/
+
+# local tooling settings (may hold personal tokens)
+.claude/settings.local.json
+
+# logs
+*.log
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
